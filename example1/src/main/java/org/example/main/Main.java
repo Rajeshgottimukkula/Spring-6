@@ -15,7 +15,7 @@ public class Main {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(VehicleConfig.class);
 
-        Vehicle vehicle1=context.getBean("vehicle1",Vehicle.class);
+        Vehicle vehicle1=context.getBean(Vehicle.class);
 
         System.out.println(vehicle1.getName()+" from spring context");
 

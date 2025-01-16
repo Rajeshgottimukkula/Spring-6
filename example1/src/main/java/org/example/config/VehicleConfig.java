@@ -3,6 +3,7 @@ package org.example.config;
 import org.example.beans.Vehicle;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 //import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.Configuration;
@@ -31,6 +32,7 @@ vehicle.setName("Vehicle1");
 
 
     @Bean
+    @Primary
     Vehicle vehicle3(){
 
 
