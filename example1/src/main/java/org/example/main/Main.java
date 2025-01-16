@@ -1,6 +1,8 @@
 package org.example.main;
 
+import org.example.beans.Mobiles;
 import org.example.beans.Vehicle;
+import org.example.config.MobileConfig;
 import org.example.config.VehicleConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -23,6 +25,13 @@ public class Main {
         Vehicle vehicle2=context.getBean("vehicle2",Vehicle.class);
 
         System.out.println(vehicle2.getName()+" from spring context");
+
+
+        AnnotationConfigApplicationContext context1 = new AnnotationConfigApplicationContext(MobileConfig.class);
+
+        Mobiles redmi=context1.getBean("redmi", Mobiles.class);
+
+        System.out.println(redmi.getName()+" from spring context");
 
 
 
