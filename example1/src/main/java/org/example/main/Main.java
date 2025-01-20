@@ -36,13 +36,16 @@ public class Main {
 //
 //        System.out.println(redmi.getName()+" from spring context");
 
-        ApplicationContext context=new AnnotationConfigApplicationContext(ProjectConfig.class);
+        var context=new AnnotationConfigApplicationContext(ProjectConfig.class);
 
         Students students=context.getBean(Students.class);
 students.methodFromComponentClass();
 Vehicle tesla=context.getBean("tesla",Vehicle.class);
 
         System.out.println(tesla.getName());
+        System.out.println(students.getName());
+
+        context.close();
         System.out.println(students.getName());
 
     }

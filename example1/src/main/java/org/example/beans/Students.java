@@ -2,6 +2,7 @@ package org.example.beans;
 
 
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -24,6 +25,11 @@ public class Students {
     public void methodFromComponentClass(){
 
         System.out.println("Method from component class");
+    }
+
+    @PreDestroy
+    public void destory(){
+        System.out.println("Destroy method called");
     }
 
 
