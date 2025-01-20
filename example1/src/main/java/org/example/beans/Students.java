@@ -1,6 +1,7 @@
 package org.example.beans;
 
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,6 +11,12 @@ public class Students {
 
     public String getName() {
         return name;
+    }
+
+    @PostConstruct
+    public void initialize(){
+        this.name="Rajesh";
+
     }
 
 

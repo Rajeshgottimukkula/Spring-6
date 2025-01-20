@@ -43,6 +43,7 @@ students.methodFromComponentClass();
 Vehicle tesla=context.getBean("tesla",Vehicle.class);
 
         System.out.println(tesla.getName());
+        System.out.println(students.getName());
 
     }
 }
